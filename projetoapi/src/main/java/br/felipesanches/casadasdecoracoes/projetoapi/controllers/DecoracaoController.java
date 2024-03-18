@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.felipesanches.casadasdecoracoes.projetoapi.models.Decoracao;
 import br.felipesanches.casadasdecoracoes.projetoapi.repository.DecoracaoRepository;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController //transformar em controller
@@ -46,4 +48,10 @@ public class DecoracaoController {
     public Decoracao selecionar (@PathVariable int id){
         return repository.selecionar(id);
     }
+
+    @GetMapping("/teste")
+    public Decoracao getMethodName() {
+        return new Decoracao();
+    }
+    
 }

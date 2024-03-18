@@ -3,6 +3,7 @@ package br.felipesanches.casadasdecoracoes.projetoapi.models;
 import java.sql.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.annotation.Generated;
@@ -24,6 +25,8 @@ public class Cliente {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT-3")
     private Date dtNascimento;
 
     @JsonIgnore

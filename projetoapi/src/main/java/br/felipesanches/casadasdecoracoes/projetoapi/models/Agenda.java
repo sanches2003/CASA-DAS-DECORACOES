@@ -1,6 +1,9 @@
 package br.felipesanches.casadasdecoracoes.projetoapi.models;
 
 import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +24,8 @@ public class Agenda {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private int id;
     private float valor;
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT-3")
     private Date data;
     private Boolean pago;
 
