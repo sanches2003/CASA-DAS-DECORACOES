@@ -12,4 +12,8 @@ public interface UsuarioRepository extends
             @Query(value = "select * from usuario where id=?1",
             nativeQuery = true)
             Usuario selecionar(int id);
-}
+
+            @Query(value = "select * from usuario where login=?1" + 
+            " and senha=?2", nativeQuery = true)
+          Usuario autenticar(String login, String senha);
+          }
