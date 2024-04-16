@@ -1,6 +1,7 @@
 package br.felipesanches.casadasdecoracoes.projetoapi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import br.felipesanches.casadasdecoracoes.projetoapi.repository.AgendaRepository
 
 @RestController //transformar em controller
 @RequestMapping("/agenda")
+@CrossOrigin("*")
 public class AgendaController {
     
      @Autowired //gerencia automaticamente
