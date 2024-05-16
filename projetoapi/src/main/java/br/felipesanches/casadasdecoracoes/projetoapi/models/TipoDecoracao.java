@@ -23,7 +23,7 @@ public class TipoDecoracao {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private int id;
-    private String descricao;;
+    private String descricao;
 
     @JsonIgnore
     @OneToMany(mappedBy = "tipoDecoracao") // 1 tipo para muitos

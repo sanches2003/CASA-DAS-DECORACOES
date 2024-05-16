@@ -25,6 +25,8 @@ public class Cliente {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
+    private String uf;
+    private String cidade;
 
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT-3")
     private Date dtNascimento;
